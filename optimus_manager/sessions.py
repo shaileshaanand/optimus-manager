@@ -76,6 +76,12 @@ def logout_current_desktop_session():
     except BashError:
         pass
 
+    # lxde
+    try:
+        exec_bash("qtile-cmd -o cmd -f shutdown")
+    except BashError:
+        pass
+
 
 def is_there_a_wayland_session():
 
